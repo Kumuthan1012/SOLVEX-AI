@@ -6,10 +6,10 @@ export const WhatsAppFloatingButton: React.FC = () => {
   const [showTooltip, setShowTooltip] = useState(true);
 
   return (
-    <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2">
+    <div className="hidden md:flex fixed bottom-6 right-6 z-40 flex-col items-end gap-2">
       {/* Tooltip prompt */}
       {showTooltip && (
-        <div className="hidden sm:flex items-center gap-2 p-2.5 rounded-xl bg-slate-900 text-white shadow-lg text-xs animate-fade-in border border-slate-700/80">
+        <div className="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/95 text-white shadow-xl text-xs border border-slate-700/80 backdrop-blur-md">
           <span>Need quick advice? Chat with us on WhatsApp</span>
           <button
             type="button"

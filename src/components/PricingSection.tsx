@@ -322,7 +322,7 @@ export const PricingSection: React.FC = () => {
                   </div>
 
                   {/* Right: Price & CTA Action */}
-                  <div className="flex flex-wrap sm:flex-nowrap items-center justify-between lg:justify-end gap-4 pt-3 lg:pt-0 border-t lg:border-t-0 border-slate-800">
+                  <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between lg:justify-end gap-3 pt-3 lg:pt-0 border-t lg:border-t-0 border-slate-800 w-full lg:w-auto">
                     <div className="text-left lg:text-right">
                       <div className="text-xl sm:text-2xl font-black text-cyan-300 font-mono">
                         {item.indicativePrice}
@@ -332,13 +332,13 @@ export const PricingSection: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 w-full sm:w-auto">
                       <a
                         href={buildWhatsAppUrl(item.whatsappQuery)}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className="py-2.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs flex items-center gap-1.5 shadow-sm transition-all active:scale-95"
+                        className="flex-1 sm:flex-initial py-2.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm transition-all active:scale-95 min-h-[42px]"
                       >
                         <span>Discuss & Negotiate</span>
                         <ArrowUpRight className="w-3.5 h-3.5" />

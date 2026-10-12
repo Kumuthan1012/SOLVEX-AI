@@ -223,40 +223,40 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialAudience 
                     <button
                       type="button"
                       onClick={() => setCustomerType("business")}
-                      className={`p-2.5 rounded-xl border text-xs font-semibold flex flex-col items-center justify-center gap-1 transition-all ${
+                      className={`py-2.5 px-1.5 sm:px-2.5 rounded-xl border text-[11px] sm:text-xs font-semibold flex flex-col items-center justify-center gap-1 transition-all min-h-[48px] ${
                         customerType === "business"
                           ? "bg-blue-600 border-blue-500 text-white shadow-xs"
                           : "border-slate-800 bg-slate-900/60 hover:bg-slate-800 text-slate-300"
                       }`}
                     >
-                      <Building className="w-4 h-4" />
-                      <span>Business</span>
+                      <Building className="w-4 h-4 shrink-0" />
+                      <span className="truncate">Business</span>
                     </button>
 
                     <button
                       type="button"
                       onClick={() => setCustomerType("company")}
-                      className={`p-2.5 rounded-xl border text-xs font-semibold flex flex-col items-center justify-center gap-1 transition-all ${
+                      className={`py-2.5 px-1.5 sm:px-2.5 rounded-xl border text-[11px] sm:text-xs font-semibold flex flex-col items-center justify-center gap-1 transition-all min-h-[48px] ${
                         customerType === "company"
                           ? "bg-blue-600 border-blue-500 text-white shadow-xs"
                           : "border-slate-800 bg-slate-900/60 hover:bg-slate-800 text-slate-300"
                       }`}
                     >
-                      <Briefcase className="w-4 h-4" />
-                      <span>Company Employee</span>
+                      <Briefcase className="w-4 h-4 shrink-0" />
+                      <span className="truncate">Employee</span>
                     </button>
 
                     <button
                       type="button"
                       onClick={() => setCustomerType("individual")}
-                      className={`p-2.5 rounded-xl border text-xs font-semibold flex flex-col items-center justify-center gap-1 transition-all ${
+                      className={`py-2.5 px-1.5 sm:px-2.5 rounded-xl border text-[11px] sm:text-xs font-semibold flex flex-col items-center justify-center gap-1 transition-all min-h-[48px] ${
                         customerType === "individual"
                           ? "bg-blue-600 border-blue-500 text-white shadow-xs"
                           : "border-slate-800 bg-slate-900/60 hover:bg-slate-800 text-slate-300"
                       }`}
                     >
-                      <User className="w-4 h-4" />
-                      <span>Individual</span>
+                      <User className="w-4 h-4 shrink-0" />
+                      <span className="truncate">Individual</span>
                     </button>
                   </div>
                 </div>
@@ -272,7 +272,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialAudience 
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="e.g. Alex Tan"
-                      className="w-full px-3 py-2.5 text-xs sm:text-sm rounded-xl border border-slate-800 bg-slate-900/90 text-white placeholder-slate-500 focus:outline-hidden focus:ring-2 focus:ring-cyan-500"
+                      className="w-full px-3.5 py-3 text-base sm:text-sm rounded-xl border border-slate-800 bg-slate-900/90 text-white placeholder-slate-500 focus:outline-hidden focus:ring-2 focus:ring-cyan-500"
                     />
                   </div>
 
@@ -285,7 +285,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialAudience 
                       value={orgName}
                       onChange={(e) => setOrgName(e.target.value)}
                       placeholder="e.g. Penang Cafe / Department"
-                      className="w-full px-3 py-2.5 text-xs sm:text-sm rounded-xl border border-slate-800 bg-slate-900/90 text-white placeholder-slate-500 focus:outline-hidden focus:ring-2 focus:ring-cyan-500"
+                      className="w-full px-3.5 py-3 text-base sm:text-sm rounded-xl border border-slate-800 bg-slate-900/90 text-white placeholder-slate-500 focus:outline-hidden focus:ring-2 focus:ring-cyan-500"
                     />
                   </div>
                 </div>
@@ -301,7 +301,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialAudience 
                       value={contactMethod}
                       onChange={(e) => setContactMethod(e.target.value)}
                       placeholder="e.g. alex@example.com / WhatsApp"
-                      className="w-full px-3 py-2.5 text-xs sm:text-sm rounded-xl border border-slate-800 bg-slate-900/90 text-white placeholder-slate-500 focus:outline-hidden focus:ring-2 focus:ring-cyan-500"
+                      className="w-full px-3.5 py-3 text-base sm:text-sm rounded-xl border border-slate-800 bg-slate-900/90 text-white placeholder-slate-500 focus:outline-hidden focus:ring-2 focus:ring-cyan-500"
                     />
                   </div>
 
@@ -312,7 +312,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialAudience 
                     <select
                       value={budgetRange}
                       onChange={(e) => setBudgetRange(e.target.value)}
-                      className="w-full px-3 py-2.5 text-xs sm:text-sm rounded-xl border border-slate-800 bg-slate-900/90 text-white focus:outline-hidden focus:ring-2 focus:ring-cyan-500"
+                      className="w-full px-3.5 py-3 text-base sm:text-sm rounded-xl border border-slate-800 bg-slate-900/90 text-white focus:outline-hidden focus:ring-2 focus:ring-cyan-500"
                     >
                       <option value="Open to discussion / Flexible">
                         Open to discussion / Flexible (Focus on solution first)
@@ -335,7 +335,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialAudience 
                     value={problemDescription}
                     onChange={(e) => setProblemDescription(e.target.value)}
                     placeholder="Describe your challenge in your own words. For example: 'We waste 3 hours every week compiling inventory' or 'We need a simple website with a WhatsApp ordering menu in Penang.'"
-                    className="w-full px-3 py-2.5 text-xs sm:text-sm rounded-xl border border-slate-800 bg-slate-900/90 text-white placeholder-slate-500 focus:outline-hidden focus:ring-2 focus:ring-cyan-500 resize-y"
+                    className="w-full px-3.5 py-3 text-base sm:text-sm rounded-xl border border-slate-800 bg-slate-900/90 text-white placeholder-slate-500 focus:outline-hidden focus:ring-2 focus:ring-cyan-500 resize-y"
                     required
                   />
                 </div>
@@ -350,7 +350,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialAudience 
                     value={preferredOutcome}
                     onChange={(e) => setPreferredOutcome(e.target.value)}
                     placeholder="e.g. Save 2 hours weekly, get more local enquiries, look professional online"
-                    className="w-full px-3 py-2.5 text-xs sm:text-sm rounded-xl border border-slate-800 bg-slate-900/90 text-white placeholder-slate-500 focus:outline-hidden focus:ring-2 focus:ring-cyan-500"
+                    className="w-full px-3.5 py-3 text-base sm:text-sm rounded-xl border border-slate-800 bg-slate-900/90 text-white placeholder-slate-500 focus:outline-hidden focus:ring-2 focus:ring-cyan-500"
                   />
                 </div>
 
@@ -363,10 +363,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialAudience 
                 </div>
 
                 {/* Submission Actions */}
-                <div className="pt-2 flex flex-col sm:flex-row items-center gap-3">
+                <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                   <button
                     type="submit"
-                    className="w-full sm:flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-400 hover:to-cyan-300 text-slate-950 font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-md shadow-cyan-500/10"
+                    className="w-full sm:flex-1 py-3.5 px-4 min-h-[48px] rounded-xl bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-400 hover:to-cyan-300 text-slate-950 font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-md shadow-cyan-500/10 active:scale-98"
                   >
                     <Send className="w-4 h-4" />
                     <span>Send via WhatsApp (+60165101410)</span>
@@ -375,7 +375,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialAudience 
                   <button
                     type="button"
                     onClick={handleCopySummary}
-                    className="w-full sm:w-auto py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 transition-colors"
+                    className="w-full sm:w-auto py-3.5 px-4 min-h-[48px] rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 font-semibold text-sm flex items-center justify-center gap-2 transition-colors active:scale-98"
                   >
                     {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4 text-slate-400" />}
                     <span>{copied ? "Copied to Clipboard!" : "Copy Summary"}</span>

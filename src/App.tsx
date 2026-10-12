@@ -20,12 +20,13 @@ import { ContactSection } from "./components/ContactSection";
 import { FAQSection } from "./components/FAQSection";
 import { Footer } from "./components/Footer";
 import { WhatsAppFloatingButton } from "./components/WhatsAppFloatingButton";
+import { MobileBottomNav } from "./components/MobileBottomNav";
 
 export default function App() {
   const [selectedAudience, setSelectedAudience] = useState<"business" | "company" | "individual">("business");
 
   return (
-    <div className="min-h-screen bg-[#070b14] text-slate-100 flex flex-col font-sans selection:bg-cyan-500 selection:text-slate-950">
+    <div className="min-h-screen bg-[#070b14] text-slate-100 flex flex-col font-sans selection:bg-cyan-500 selection:text-slate-950 pb-16 md:pb-0">
       {/* Sticky Navigation Bar */}
       <Navbar />
 
@@ -73,8 +74,11 @@ export default function App() {
       {/* Section 18: Footer */}
       <Footer />
 
-      {/* Quick WhatsApp Floating Contact Trigger */}
+      {/* Quick WhatsApp Floating Contact Trigger for Desktop/Tablet */}
       <WhatsAppFloatingButton />
+
+      {/* Persistent Bottom Action Dock for Mobile Devices */}
+      <MobileBottomNav />
     </div>
   );
 }

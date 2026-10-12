@@ -91,15 +91,15 @@ export const ServicesSection: React.FC = () => {
         </div>
 
         {/* Filter & Search Bar */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10 pb-6 border-b border-slate-800">
-          {/* Functional Button Segmented Filter */}
-          <div className="flex flex-wrap items-center gap-1.5 p-1 bg-slate-900/80 border border-slate-800 rounded-xl">
+        <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 mb-10 pb-6 border-b border-slate-800">
+          {/* Functional Touch-Swipable Segmented Filter */}
+          <div className="flex items-center gap-1.5 p-1.5 bg-slate-900/80 border border-slate-800 rounded-xl overflow-x-auto w-full md:w-auto scrollbar-none touch-pan-x">
             {filterCategories.map((cat) => (
               <button
                 key={cat.id}
                 type="button"
                 onClick={() => setSelectedFilter(cat.id)}
-                className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
+                className={`px-3 py-2 text-xs font-medium rounded-lg whitespace-nowrap shrink-0 transition-colors ${
                   selectedFilter === cat.id
                     ? "bg-blue-600 text-white shadow-xs font-semibold"
                     : "text-slate-400 hover:text-white"
