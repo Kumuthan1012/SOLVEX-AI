@@ -1,0 +1,8 @@
+{
+  "name": "SolveX AI — Digital Solutions & Practical Problem Solving",
+  "description": "SolveX AI helps businesses, companies, employees, and individuals in Penang, Malaysia overcome challenges using technology, creative thinking, and AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
